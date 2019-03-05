@@ -1,32 +1,7 @@
 import { Observable, of } from 'rxjs';
 import { delay } from 'rxjs/operators';
+import { IData } from 'src/app/store/reducers/products.reducer';
 
-export interface IData {
-    title: string;
-    descriptionShort: string;
-    img: string;
-    price: number;
-    discount: number;
-    sale: boolean;
-    images: {
-        img1: string;
-        img2: string;
-        img3: string;
-    },
-    description: {
-        text1: string;
-        text2: string;
-        text3: string;
-        text4: string;
-    },
-    specification: {
-        height: number;
-        width: number;
-        depth: number;
-        material: string;
-    },
-    type: string;
- }
 
 export const data: IData[] = [
     {
