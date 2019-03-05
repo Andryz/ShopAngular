@@ -11,7 +11,9 @@ export class GetProductsPending{
 
 export class GetProductsSuccess{
     public readonly type = GET_PRODUCTS_SUCCESS;
-    public constructor( public payload: IData[]) {}
+    public constructor( public payload: IData[]) {
+        
+    }
 }
 
 export class GetProductsError{

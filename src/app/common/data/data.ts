@@ -3,7 +3,7 @@ import { delay } from 'rxjs/operators';
 import { IData } from 'src/app/store/reducers/products.reducer';
 
 
-export const data: IData[] = [
+export const productsData: IData[] = [
     {
         title: 'title',
         descriptionShort: 'descroption',
@@ -161,5 +161,5 @@ export const data: IData[] = [
         type: 'Диваны'
     }
 ];
-export const data$: Observable<IData[]> = of(data)
+export const productsData$: Observable<IData[]> = of(productsData)
     .pipe(delay(300));

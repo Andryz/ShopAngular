@@ -12,6 +12,7 @@ import { environment } from 'src/environments/environment';
 import { ProductsEffects } from './store/effects/products.effect';
 import { EffectsModule } from '@ngrx/effects';
 import { HttpClientModule } from '@angular/common/http';
+import { ProductsService } from './services/products.service';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,7 @@ import { HttpClientModule } from '@angular/common/http';
       ? []
       : StoreDevtoolsModule.instrument()
   ],
-  providers: [],
+  providers: [ProductsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
