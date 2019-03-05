@@ -19,8 +19,8 @@
     </div>
     <div class="header__toolbar">
       <div class="header__toolbar__search">
-        <input type="text" placeholder="Поиск" #search [ngClass]="toggleHide">
-        <button class="header__toolbar__item header__toolbar__btn"  (click)="toggleSearch()">
+        <input type="text" placeholder="Поиск" [ngClass]="toggleHide" *ngIf="isShow">
+        <button class="header__toolbar__item header__toolbar__btn"  (click)="isShow = !isShow">
           <i class="fas fa-search"></i>
         </button>
       </div>

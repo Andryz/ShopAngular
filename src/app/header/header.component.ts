@@ -9,12 +9,10 @@ export class HeaderComponent implements OnInit {
 
   constructor() { }
 
-  public toggleHide: string;
+  public toggleHide: string = 'show';
+  public isShow: boolean = true;
 
   ngOnInit() {
   }
 
-  toggleSearch(){
-    this.toggleHide = 'show';
-  }
 }
