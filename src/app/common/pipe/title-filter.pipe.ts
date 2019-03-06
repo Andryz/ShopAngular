@@ -10,8 +10,8 @@ export class TitleFilterPipe implements PipeTransform {
     if(!clickTitle){
       return products;
     }
-    return products.filter( (products)=>{
-      return products.type.toLowerCase()
+    return products.filter( (product)=>{
+      return product.type.toLowerCase()
         .includes(clickTitle.toLowerCase());
     });
   }

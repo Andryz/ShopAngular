@@ -3,6 +3,6 @@
 </p>
 
 
-<ng-container *ngFor="let product of products">
+<ng-container *ngFor="let product of products | titleFilter:text">
   <p>{{product.type }}</p>
 </ng-container>

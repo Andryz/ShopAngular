@@ -8,10 +8,13 @@ import { IData } from '../store/reducers/products.reducer';
 })
 export class ProductsComponent implements OnInit {
 
-  constructor() { }
-
+  
   @Input()
   public products: IData[];
+  
+  public text: string;
+
+  constructor() { }
 
   ngOnInit() {
   }

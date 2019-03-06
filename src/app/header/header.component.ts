@@ -7,10 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
-
+  public text = '';
   public toggleHide: string = 'show';
   public isShow: boolean = false;
+  
+  constructor() { }
 
   ngOnInit() {
   }
