@@ -10,7 +10,7 @@ export class HeaderComponent implements OnInit {
   constructor() { }
 
   public toggleHide: string = 'show';
-  public isShow: boolean = true;
+  public isShow: boolean = false;
 
   ngOnInit() {
   }

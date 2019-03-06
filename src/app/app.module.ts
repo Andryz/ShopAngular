@@ -13,13 +13,15 @@ import { ProductsEffects } from './store/effects/products.effect';
 import { EffectsModule } from '@ngrx/effects';
 import { HttpClientModule } from '@angular/common/http';
 import { ProductsService } from './services/products.service';
+import { TitleFilterPipe } from './common/pipe/title-filter.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    ProductsComponent
+    ProductsComponent,
+    TitleFilterPipe
   ],
   imports: [
     BrowserModule,

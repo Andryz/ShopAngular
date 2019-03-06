@@ -2,8 +2,8 @@
 
 <main *ngIf="(products$ | async) as products; else loading">
 
-    <!-- <app-products [products]="products"></app-products> -->
-    <p>{{products | json}}</p>
+    <app-products [products]="products"></app-products>
+    <!-- <p>{{products | json}}</p> -->
 </main>
 <ng-template #loading> loading ...</ng-template>
 <app-footer></app-footer>

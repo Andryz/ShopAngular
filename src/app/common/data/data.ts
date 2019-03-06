@@ -5,7 +5,7 @@ import { IData } from 'src/app/store/reducers/products.reducer';
 
 export const productsData: IData[] = [
     {
-        title: 'title',
+        title: 'Диваны',
         descriptionShort: 'descroption',
         img: '../assets/img/hotel1.jpg',
         price: 200,
@@ -31,7 +31,7 @@ export const productsData: IData[] = [
         type: 'Диваны'
     },
     {
-        title: 'title',
+        title: 'Стулья',
         descriptionShort: 'descroption',
         img: '../assets/img/hotel1.jpg',
         price: 200,
@@ -54,10 +54,10 @@ export const productsData: IData[] = [
             depth: 10,
             material: 'text'
         },
-        type: 'Диваны'
+        type: 'Стулья'
     },
     {
-        title: 'title',
+        title: 'Столы',
         descriptionShort: 'descroption',
         img: '../assets/img/hotel1.jpg',
         price: 200,
@@ -80,10 +80,10 @@ export const productsData: IData[] = [
             depth: 10,
             material: 'text'
         },
-        type: 'Диваны'
+        type: 'Столы'
     },
     {
-        title: 'title',
+        title: 'Комплекты',
         descriptionShort: 'descroption',
         img: '../assets/img/hotel1.jpg',
         price: 200,
@@ -106,10 +106,10 @@ export const productsData: IData[] = [
             depth: 10,
             material: 'text'
         },
-        type: 'Диваны'
+        type: 'Комплекты'
     },
     {
-        title: 'title',
+        title: 'Освещение',
         descriptionShort: 'descroption',
         img: '../assets/img/hotel1.jpg',
         price: 200,
@@ -132,10 +132,10 @@ export const productsData: IData[] = [
             depth: 10,
             material: 'text'
         },
-        type: 'Диваны'
+        type: 'Освещение'
     },
     {
-        title: 'title',
+        title: 'Диваны и кресла',
         descriptionShort: 'descroption',
         img: '../assets/img/hotel1.jpg',
         price: 200,
@@ -158,7 +158,7 @@ export const productsData: IData[] = [
             depth: 10,
             material: 'text'
         },
-        type: 'Диваны'
+        type: 'Диваны и кресла'
     }
 ];
 export const productsData$: Observable<IData[]> = of(productsData)
