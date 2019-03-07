@@ -1,8 +1,19 @@
 <p>
   products works!
 </p>
+<div class="furniture">
 
+  <ng-container *ngFor="let product of products | titleFilter:navTitletext">
+    <p>{{products | json}}</p>
+    <div class="furniture__item">
+      <div class="furniture__img">
+        <img src="https://static-eu.insales.ru/images/products/1/2115/121276483/large_large_et0015.jpg" alt="мебель">
+      </div>
+      <div class="furniture__description">
+        <div class="furniture__description__title">Стол "Maison"</div>
+        <div class="furniture__description__price">99900 руб</div>
+      </div>
+    </div>
 
-<ng-container *ngFor="let product of products | titleFilter:navTitletext">
-  <p>{{products | json}}</p>
-</ng-container>
+  </ng-container>
+</div>
