@@ -14,6 +14,7 @@ import { EffectsModule } from '@ngrx/effects';
 import { HttpClientModule } from '@angular/common/http';
 import { ProductsService } from './services/products.service';
 import { TitleFilterPipe } from './common/pipe/title-filter.pipe';
+import { AsideFilterComponent } from './aside-filter/aside-filter.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { TitleFilterPipe } from './common/pipe/title-filter.pipe';
     HeaderComponent,
     FooterComponent,
     ProductsComponent,
-    TitleFilterPipe
+    TitleFilterPipe,
+    AsideFilterComponent
   ],
   imports: [
     BrowserModule,

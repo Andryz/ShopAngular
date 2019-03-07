@@ -43,8 +43,10 @@ html
         font-size: 1.6rem
         color: $green
     .header__logo
+        display: block
         font-size: 3rem
         font-weight: bold
+        text-decoration: none
         color: $green
     .header__toolbar
         width: 180px
@@ -98,30 +100,70 @@ html
                 font-size: 1.4rem
                 font-weight: 600
                 text-decoration: none
+                text-transform: uppercase
                 color: #fff
                 &:hover
                     color: #525252
 // ======= header END ========
 
 
-// ======= products  ========
-// ======= products END ========
+// ======= Main  ========
+.container
+    display: flex
+    justify-content: center
+main
+    width: 1300px
+    display: flex
+    justify-content: space-between
+    box-sizing: border-box
+    padding: 20px
+// ======= Main END ========
+
+// ======= asideFilter  ========
+.asideFilters
+    width: 300px
+    box-sizing: border-box
+// ======= asideFilter END ========
+
+
 
 // ======= header  ========
 // ======= header END ========
 
+
+
 // ======= products  ========
 .furniture
+    width: 980px
+    box-sizing: border-box
+    &__list
+        display: flex
+        flex-wrap: wrap
+
     &__item
-        width: 300px
-        height: 300px
+        width: 305px
+        height: 365px
+        position: relative
+        box-sizing: border-box
+        border: 1px solid #eaeaea
+        margin: 10px
+        padding: 20px
     &__img
-        width: 150px
+        width: 243px
+        display: block
+        & img
+            width: 100%
+            height: auto   
     &__description
+        width: calc(100% - 40px)
+        position: absolute
+        bottom: 20px
         display: flex
         justify-content: space-between
-        font-size: 1.5rem
+        align-items: flex-end
+        font-size: 1.6rem
         &__title
+            width: 50%
             color: $green
 
 

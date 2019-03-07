@@ -6,8 +6,14 @@ import { IData } from 'src/app/store/reducers/products.reducer';
 })
 export class TitleFilterPipe implements PipeTransform {
 
+private allProducts: string = "ВЕСЬ ТОВАР";
+
   transform(products: IData[], clickTitle: string): IData[] {
     if(!clickTitle){
+      return products;
+    }
+    if(clickTitle == this.allProducts){
+      console.log(clickTitle.toLowerCase(), this.allProducts.toLowerCase());
       return products;
     }
     return products.filter( (product)=>{

@@ -1,9 +1,12 @@
 <app-header></app-header>
 
-<main *ngIf="(products$ | async) as products; else loading">
+<div class="container">
+    <main *ngIf="(products$ | async) as products; else loading">
+        <app-aside-filter></app-aside-filter>
+        <app-products [products]="products"></app-products>
+    </main>
+</div>
 
-    <app-products [products]="products"></app-products>
-    <!-- <p>{{products | json}}</p> -->
-</main>
 <ng-template #loading> loading ...</ng-template>
+
 <app-footer></app-footer>

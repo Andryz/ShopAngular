@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ShareService } from '../services/share.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-header',
@@ -8,23 +9,22 @@ import { ShareService } from '../services/share.service';
 })
 export class HeaderComponent implements OnInit {
 
-  public navTitletext: string = '';
+  public navTitletext: Observable<string>;
   public toggleHide: string = 'show';
   public isShow: boolean = false;
 
-  public clickTitle(e){
-    // this.text = e.target.textContent;
-    this.share.doClick(e);
-  }
+
   
   constructor(private share: ShareService) {
-    this.share.onClick.subscribe(titleText => this.navTitletext = titleText);
+    this.navTitletext = share.getShareData();
   }
 
+  public clickTitle(e){
+    this.share.doClick(e);
+  }
 
 
   ngOnInit() {
-    // console.log(this.text);
   }
 
 }

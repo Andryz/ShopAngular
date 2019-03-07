@@ -14,9 +14,9 @@
       <p>+7(999)123-45-67</p>
       <p>sales@company.ru</p>
     </div>
-    <div class="header__logo">
+    <a class="header__logo" href="#">
       Furniture store
-    </div>
+    </a>
     <div class="header__toolbar">
       <div class="header__toolbar__search">
         <input type="text" placeholder="Поиск" [ngClass]="toggleHide" *ngIf="isShow">
@@ -30,10 +30,10 @@
   </div>
   <nav class="nav-main">
     <ul (click)="clickTitle($event)">
+      <li><a href="#">ВЕСЬ ТОВАР</a></li>
       <li><a href="#">ДИВАНЫ И КРЕСЛА</a></li>
       <li><a href="#">СТУЛЬЯ</a></li>
       <li><a href="#">СТОЛЫ</a></li>
-      <li><a href="#">СИСТЕМЫ ХРАНЕНИЯ</a></li>
       <li><a href="#">ОСВЕЩЕНИЕ</a></li>
       <li><a href="#">КОМПЛЕКТЫ</a></li>
     </ul> 

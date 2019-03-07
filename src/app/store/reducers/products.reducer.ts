@@ -30,30 +30,30 @@ export interface IData {
 
 const initialState: IData[] = [
     {
-        title: 'string',
-        descriptionShort: 'string',
-        img: 'string',
-        price: 2,
-        discount: 5,
+        title: 'Стул "Pit"',
+        descriptionShort: 'descroption',
+        img: 'https://static-eu.insales.ru/images/products/1/2134/121276502/large_large_to0284.jpg',
+        price: 200,
+        discount: 12,
         sale: true,
         images: {
-            img1: 'string',
-            img2: 'string',
-            img3: 'string',
+            img1: '../assets/img/hotel1.jpg',
+            img2: '../assets/img/hotel1.jpg',
+            img3: '../assets/img/hotel1.jpg'
         },
         description: {
-            text1: 'string',
-            text2: 'string',
-            text3: 'string',
-            text4: 'string',
+            text1: 'nice text',
+            text2: 'nice text',
+            text3: 'nice text',
+            text4: 'nice text'
         },
         specification: {
-            height: 5,
-            width: 7,
-            depth: 8,
-            material: 'string',
+            height: 10,
+            width: 10,
+            depth: 10,
+            material: 'text'
         },
-        type: 'string'
+        type: 'Стулья'
     }
 ];
 
