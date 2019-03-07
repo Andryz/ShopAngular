@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { IData } from '../store/reducers/products.reducer';
+import { ShareService } from '../services/share.service';
 
 @Component({
   selector: 'app-products',
@@ -12,9 +13,11 @@ export class ProductsComponent implements OnInit {
   @Input()
   public products: IData[];
   
-  public text: string;
+  public navTitletext: string;
 
-  constructor() { }
+  constructor(private share: ShareService) {
+    this.share.onClick.subscribe(titleText => this.navTitletext = titleText);
+   }
 
   ngOnInit() {
   }
