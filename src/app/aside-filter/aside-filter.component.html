@@ -1,58 +1,90 @@
 <aside class="asideFilters">
-  <p>Фильтр</p>
-  <!-- <div class="asideFilters__item">
-    <div class=""><p>Материал</p> <i class="fas fa-angle-down"></i></div>
-    <ul>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-    </ul>
-  </div> -->
   <form action="" (click)="openFilter($event)">
     <div class="asideFilters__item">
       <button class="asideFilters__btn">
         <span class="asideFilters__title">Цвет</span>
         <span class="asideFilters__icon"><i class="fas fa-angle-down"></i></span>
       </button>
-      <ul>
-        <li><input type="checkbox" id="color-black"><label class="checkbox-label fas" for="color-black">  <span>черный</span> </label></li>
-        <li><input type="checkbox" id="color-white"><label class="checkbox-label fas" for="color-white"><span>белый</span></label></li>
-        <li><input type="checkbox" id="color-red"><label class="checkbox-label fas" for="color-red"><span>красный</span></label></li>
-        <li><input type="checkbox" id="color-light-wood"><label class="checkbox-label fas" for="color-light-wood"><span>светлое дерево</span></label></li>
-        <li><input type="checkbox" id="color-red-tree"><label class="checkbox-label fas" for="color-red-tree"><span>красное дерево</span></label></li>
-      </ul>
+      <div class="asideFilters__list">
+        <ul>
+          <li><input type="checkbox" id="color-black"><label class="checkbox-label fas" for="color-black">  <span>черный</span> </label></li>
+          <li><input type="checkbox" id="color-white"><label class="checkbox-label fas" for="color-white"><span>белый</span></label></li>
+          <li><input type="checkbox" id="color-red"><label class="checkbox-label fas" for="color-red"><span>красный</span></label></li>
+          <li><input type="checkbox" id="color-light-wood"><label class="checkbox-label fas" for="color-light-wood"><span>светлое дерево</span></label></li>
+          <li><input type="checkbox" id="color-red-tree"><label class="checkbox-label fas" for="color-red-tree"><span>красное дерево</span></label></li>
+        </ul>
+      </div>
     </div>
+    
     <div class="asideFilters__item">
       <button class="asideFilters__btn">
         <span class="asideFilters__title">Высота</span>
         <span class="asideFilters__icon"><i class="fas fa-angle-down"></i></span>
       </button>
+      <div class="asideFilters__list">
+        <ul>
+          <li><input type="checkbox" id="color-black"><label class="checkbox-label fas" for="color-black">  <span>черный</span> </label></li>
+          <li><input type="checkbox" id="color-white"><label class="checkbox-label fas" for="color-white"><span>белый</span></label></li>
+          <li><input type="checkbox" id="color-red"><label class="checkbox-label fas" for="color-red"><span>красный</span></label></li>
+          <li><input type="checkbox" id="color-light-wood"><label class="checkbox-label fas" for="color-light-wood"><span>светлое дерево</span></label></li>
+          <li><input type="checkbox" id="color-red-tree"><label class="checkbox-label fas" for="color-red-tree"><span>красное дерево</span></label></li>
+        </ul>
+      </div>
     </div>
     <div class="asideFilters__item">
       <button class="asideFilters__btn">
         <span class="asideFilters__title">Глубина</span>
         <span class="asideFilters__icon"><i class="fas fa-angle-down"></i></span>
       </button>
+      <div class="asideFilters__list">
+        <ul>
+          <li><input type="checkbox" id="color-black"><label class="checkbox-label fas" for="color-black">  <span>черный</span> </label></li>
+          <li><input type="checkbox" id="color-white"><label class="checkbox-label fas" for="color-white"><span>белый</span></label></li>
+          <li><input type="checkbox" id="color-red"><label class="checkbox-label fas" for="color-red"><span>красный</span></label></li>
+          <li><input type="checkbox" id="color-light-wood"><label class="checkbox-label fas" for="color-light-wood"><span>светлое дерево</span></label></li>
+          <li><input type="checkbox" id="color-red-tree"><label class="checkbox-label fas" for="color-red-tree"><span>красное дерево</span></label></li>
+        </ul>
+      </div>
     </div>
     <div class="asideFilters__item">
       <button class="asideFilters__btn">
         <span class="asideFilters__title">Ширина</span>
         <span class="asideFilters__icon"><i class="fas fa-angle-down"></i></span>
       </button>
+      <div class="asideFilters__list">
+        <ul>
+          <li><input type="checkbox" id="color-black"><label class="checkbox-label fas" for="color-black">  <span>черный</span> </label></li>
+          <li><input type="checkbox" id="color-white"><label class="checkbox-label fas" for="color-white"><span>белый</span></label></li>
+          <li><input type="checkbox" id="color-red"><label class="checkbox-label fas" for="color-red"><span>красный</span></label></li>
+          <li><input type="checkbox" id="color-light-wood"><label class="checkbox-label fas" for="color-light-wood"><span>светлое дерево</span></label></li>
+          <li><input type="checkbox" id="color-red-tree"><label class="checkbox-label fas" for="color-red-tree"><span>красное дерево</span></label></li>
+        </ul>
+      </div>
     </div>
     <div class="asideFilters__item">
       <button class="asideFilters__btn">
         <span class="asideFilters__title">Материал</span>
         <span class="asideFilters__icon"><i class="fas fa-angle-down"></i></span>
       </button>
+      <div class="asideFilters__list">
+        <ul>
+          <li><input type="checkbox" id="material-beech"><label class="checkbox-label fas" for="material-beech">  <span>бук</span> </label></li>
+          <li><input type="checkbox" id="material-plastic"><label class="checkbox-label fas" for="material-plastic"><span>пластик</span></label></li>
+          <li><input type="checkbox" id="material-solid-oak"><label class="checkbox-label fas" for="material-solid-oak"><span>массив дуба</span></label></li>
+          <li><input type="checkbox" id="material-leather"><label class="checkbox-label fas" for="material-leather"><span>натуральная кожа</span></label></li>
+          <li><input type="checkbox" id="material-natural-wood"><label class="checkbox-label fas" for="material-natural-wood"><span>натуральное дерево</span></label></li>
+        </ul>
+      </div>
     </div>
     <div class="asideFilters__item">
       <button class="asideFilters__btn">
         <span class="asideFilters__title">Цена</span>
         <span class="asideFilters__icon"><i class="fas fa-angle-down"></i></span>
       </button>
+      <div class="asideFilters__list">
+        <span class="asideFilters__max-money">{{rage.value}}</span>
+        <input type="range" min="1" max="10000" class="range" value="10000" #rage  (mousemove)="changeFilterRange(rage.value, $event)">
+      </div>
     </div>
   </form>
 </aside>
