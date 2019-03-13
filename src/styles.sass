@@ -126,6 +126,10 @@ main
     margin-right: 10px
     &__item
         width: 100%
+        height: 40px
+        margin: 10px 0
+        overflow: hidden
+        transition: 1s
     &__btn
         width: 100%
         height: 40px
@@ -134,7 +138,6 @@ main
         align-items: center
         border: none
         border: 1px solid #eaeaea
-        margin: 10px 0
         padding: 0 10px
         cursor: pointer
         background-color: #fff
@@ -145,9 +148,13 @@ main
             color: #fff
     & form
         & ul 
+            box-sizing: border-box
+            margin: 15px 5px 15px 15px
+            padding: 0
             & li
+                list-style: none
                 & input
-
+                    display: none
                     &:checked + .checkbox-label
                         color: $green  
                     &:checked + .checkbox-label:before
@@ -169,12 +176,13 @@ main
                         position: absolute
                         top: 0
                         left: 1px
+                        box-sizing: border-box
                         display: flex
                         justify-content: center
                         align-items: center
                         border: 1px solid #000
                         border-radius: 10px
-                        font-size: 12px
+                        font-size: 9px
                         line-height: 20px
                         color: #fff
                     & span 
