@@ -1,7 +1,7 @@
 <aside class="asideFilters">
-  <form action="" (click)="openFilter($event)">
-    <div class="asideFilters__item">
-      <button class="asideFilters__btn">
+  <form>
+    <div class="asideFilters__item" appOpenFilter>
+      <button class="asideFilters__btn" type="button" >
         <span class="asideFilters__title">Цвет</span>
         <span class="asideFilters__icon"><i class="fas fa-angle-down"></i></span>
       </button>
@@ -16,8 +16,8 @@
       </div>
     </div>
     
-    <div class="asideFilters__item">
-      <button class="asideFilters__btn">
+    <div class="asideFilters__item" appOpenFilter>
+      <button class="asideFilters__btn" type="button">
         <span class="asideFilters__title">Высота</span>
         <span class="asideFilters__icon"><i class="fas fa-angle-down"></i></span>
       </button>
@@ -31,8 +31,8 @@
         </ul>
       </div>
     </div>
-    <div class="asideFilters__item">
-      <button class="asideFilters__btn">
+    <div class="asideFilters__item" appOpenFilter>
+      <button class="asideFilters__btn" type="button">
         <span class="asideFilters__title">Глубина</span>
         <span class="asideFilters__icon"><i class="fas fa-angle-down"></i></span>
       </button>
@@ -46,8 +46,8 @@
         </ul>
       </div>
     </div>
-    <div class="asideFilters__item">
-      <button class="asideFilters__btn">
+    <div class="asideFilters__item" appOpenFilter>
+      <button class="asideFilters__btn" type="button">
         <span class="asideFilters__title">Ширина</span>
         <span class="asideFilters__icon"><i class="fas fa-angle-down"></i></span>
       </button>
@@ -61,8 +61,8 @@
         </ul>
       </div>
     </div>
-    <div class="asideFilters__item">
-      <button class="asideFilters__btn">
+    <div class="asideFilters__item" appOpenFilter>
+      <button class="asideFilters__btn" type="button">
         <span class="asideFilters__title">Материал</span>
         <span class="asideFilters__icon"><i class="fas fa-angle-down"></i></span>
       </button>
@@ -76,14 +76,16 @@
         </ul>
       </div>
     </div>
-    <div class="asideFilters__item">
-      <button class="asideFilters__btn">
+    <div class="asideFilters__item" appOpenFilter>
+      <button class="asideFilters__btn" type="button">
         <span class="asideFilters__title">Цена</span>
         <span class="asideFilters__icon"><i class="fas fa-angle-down"></i></span>
       </button>
       <div class="asideFilters__list">
-        <span class="asideFilters__max-money">{{rage.value}}</span>
-        <input type="range" min="1" max="10000" class="range" value="10000" #rage  (mousemove)="changeFilterRange(rage.value, $event)">
+        <ul>
+          <span class="asideFilters__max-money">{{rage.value}}</span>
+          <input type="range" min="1" max="10000" class="range" value="10000" #rage  (mousemove)="changeFilterRange(rage.value, $event)">
+        </ul>
       </div>
     </div>
   </form>

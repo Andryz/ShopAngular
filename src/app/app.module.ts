@@ -15,6 +15,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { ProductsService } from './services/products.service';
 import { TitleFilterPipe } from './common/pipe/title-filter.pipe';
 import { AsideFilterComponent } from './aside-filter/aside-filter.component';
+import { OpenFilterDirective } from './open-filter.directive';
+import { ButtonFilterDirective } from './button-filter.directive';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { AsideFilterComponent } from './aside-filter/aside-filter.component';
     FooterComponent,
     ProductsComponent,
     TitleFilterPipe,
-    AsideFilterComponent
+    AsideFilterComponent,
+    OpenFilterDirective,
+    ButtonFilterDirective
   ],
   imports: [
     BrowserModule,
