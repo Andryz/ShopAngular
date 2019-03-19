@@ -17,6 +17,7 @@ import { TitleFilterPipe } from './common/pipe/title-filter.pipe';
 import { AsideFilterComponent } from './aside-filter/aside-filter.component';
 import { OpenFilterDirective } from './open-filter.directive';
 import { ButtonFilterDirective } from './button-filter.directive';
+import { RangeFilterDirective } from './range-filter.directive';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { ButtonFilterDirective } from './button-filter.directive';
     TitleFilterPipe,
     AsideFilterComponent,
     OpenFilterDirective,
-    ButtonFilterDirective
+    ButtonFilterDirective,
+    RangeFilterDirective
   ],
   imports: [
     BrowserModule,

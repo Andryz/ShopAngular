@@ -84,7 +84,8 @@
       <div class="asideFilters__list">
         <ul>
           <span class="asideFilters__max-money">{{rage.value}}</span>
-          <input type="range" min="1" max="10000" class="range" value="10000" #rage  (mousemove)="changeFilterRange(rage.value, $event)">
+          <input type="range" min="1" max="10000" class="range" value="10000" #rage appRangeFilter>
+          <!-- <input type="range" min="1" max="10000" class="range" value="10000" #rage appRangeFilter (mousemove)="changeFilterRange(rage.value, $event)"> -->
         </ul>
       </div>
     </div>
