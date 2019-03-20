@@ -17,7 +17,7 @@ export class ShareService {
   
   public doClick(e){
     this.shareSubject$$
-    .next(this.navTitletext = e.target.textContent)
+      .next(this.navTitletext = e.target.textContent)
   }
   constructor() { 
   }

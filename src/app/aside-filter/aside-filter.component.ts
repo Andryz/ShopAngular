@@ -13,32 +13,4 @@ export class AsideFilterComponent implements OnInit {
   ngOnInit() {
   }
 
-  // public openFilter(event: MouseEvent | any): void {
-  //   if(event.target.nodeName === "BUTTON"){
-      
-  //     const parentFilterBlock: HTMLDivElement = event.target.parentNode;
-  //     const filterButtonHeight: number = event.target.getBoundingClientRect().height;
-  //     const filterUlHeight: number =  event.target.nextElementSibling.getBoundingClientRect().height;
-  //     const arrow: HTMLSpanElement = event.target.childNodes[1];
-
-  //     arrow.classList.toggle("up-arrow");
-
-
-  //     if(parentFilterBlock.getBoundingClientRect().height > filterButtonHeight){
-  //       parentFilterBlock.style.height = filterButtonHeight + "px";
-  //     }else{
-  //       parentFilterBlock.style.height = (filterButtonHeight + filterUlHeight) + "px";
-  //     }
-      
-  //   }
-
-  //   console.dir(event.target);
-  // }
-
-  // public changeFilterRange(rangeValue: number, event): void{
-  //   this.rangeValue = rangeValue;
-  //   const maxMoney: HTMLSpanElement = event.target.previousSibling;
-  //   const maxMoneyPosition: number = rangeValue / (event.target.max / 100);
-  //   maxMoney.style.left = "calc(" + maxMoneyPosition + "% - 0px)";
-  // }
 }

@@ -83,8 +83,11 @@
       </button>
       <div class="asideFilters__list">
         <ul>
-          <span class="asideFilters__max-money">{{rage.value}}</span>
-          <input type="range" min="1" max="10000" class="range" value="10000" #rage appRangeFilter>
+          <div class="asideFilters__money">
+              <span class="asideFilters__min-money">от {{rage.min}} грн</span>
+              <span class="asideFilters__max-money">до {{rage.value}} грн</span>
+          </div>
+          <input type="range" min="1" max="10000" class="range" value="10000"  #rage appRangeFilter>
           <!-- <input type="range" min="1" max="10000" class="range" value="10000" #rage appRangeFilter (mousemove)="changeFilterRange(rage.value, $event)"> -->
         </ul>
       </div>

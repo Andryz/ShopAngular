@@ -14,7 +14,7 @@ export class RangeFilterDirective {
 
   @HostListener('mousemove') onMouseMove(){
     // console.log('Move');
-    console.dir(this.el.value);
+    // console.dir(this.el.value);
   }
 
   constructor(private element: ElementRef) { }

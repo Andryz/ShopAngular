@@ -19,7 +19,7 @@
     </a>
     <div class="header__toolbar">
       <div class="header__toolbar__search">
-        <input type="text" placeholder="Поиск" [ngClass]="toggleHide" *ngIf="isShow">
+        <input type="text" placeholder="Поиск" [ngClass]="toggleHide" *ngIf="isShow" #liveSearch (input)="inputLiveSearch($event.target.value)" (keydown.enter)="inputLiveSearch($event.target.value)">
         <button class="header__toolbar__item header__toolbar__btn"  (click)="isShow = !isShow">
           <i class="fas fa-search"></i>
         </button>
