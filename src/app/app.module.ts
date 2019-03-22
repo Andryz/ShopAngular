@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
 import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { reducers } from './store';
@@ -18,6 +19,9 @@ import { AsideFilterComponent } from './aside-filter/aside-filter.component';
 import { OpenFilterDirective } from './directives/open-filter.directive';
 import { ButtonFilterDirective } from './directives/button-filter.directive';
 import { RangeFilterDirective } from './directives/range-filter.directive';
+import { MainProductsComponent } from './content/main-products/main-products.component';
+import { routes } from './routes';
+
 
 
 @NgModule({
@@ -30,11 +34,13 @@ import { RangeFilterDirective } from './directives/range-filter.directive';
     AsideFilterComponent,
     OpenFilterDirective,
     ButtonFilterDirective,
-    RangeFilterDirective
+    RangeFilterDirective,
+    MainProductsComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
+    RouterModule.forRoot(routes),
     StoreModule.forRoot(reducers),
     EffectsModule.forRoot([ProductsEffects]),
     environment.production

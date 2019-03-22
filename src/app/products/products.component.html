@@ -1,12 +1,13 @@
 
 <div class="furniture">
-    <!-- <div>
-        <pre>
-          {{searchAnswer | async | json}}
-          {{products | async | json }}
-        </pre>
-    </div> -->
-    <div class="furniture__list">
+    <div>
+        <!-- {{searchAnswer | async | json  }} -->
+        <!-- <pre *ngFor="let product of searchAnswer  | async ">
+            <p>{{product.title}}</p> -->
+          <!-- {{products | async | json }} -->
+        <!-- </pre> -->
+    </div>
+    <!-- <div class="furniture__list">
       <ng-container *ngFor="let product of searchAnswer | async | titleFilter:(navTitletext | async)">
 
 
@@ -21,13 +22,13 @@
           </div>
     
         </ng-container>
-      </div>
+      </div> -->
 
 
 
 
 
-  <!-- <div class="furniture__list">
+  <div class="furniture__list">
 
     <ng-container *ngFor="let product of products | titleFilter:(navTitletext | async)">
 
@@ -44,6 +45,6 @@
 
     </ng-container>
 
-  </div> -->
+  </div>
 
 </div>

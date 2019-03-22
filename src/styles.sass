@@ -72,15 +72,32 @@ html
             position: relative
             border: none
             box-shadow: none
-            & input
-                display: none
-                width: 300px
-                height: 50px
-                position: absolute
-                left: -300px
-                box-sizing: border-box
-                border: 1px solid #eaeaea
-                padding: 0 0 0 20px
+            &-help
+                position: relative
+                ul 
+                    width: 300px
+                    z-index: 999
+                    position: absolute
+                    top: 50px 
+                    right: 50px
+                    box-sizing: border-box
+                    margin: 0
+                    padding: 0
+                    background-color: #fff
+                    li 
+                        padding: 10px 0 10px 10px
+                        list-style: none
+                        cursor: pointer
+                        &:hover
+                            background-color: #eaeaea
+                & input
+                    width: 300px
+                    height: 50px
+                    position: absolute
+                    left: -300px
+                    box-sizing: border-box
+                    border: 1px solid #eaeaea
+                    padding: 0 0 0 20px
         &__btn
             border: none
             box-shadow: none
@@ -164,16 +181,8 @@ main
     &__money
         display: flex
         justify-content: space-between
-        font-size: 12px
+        font-size: 14px
         font-weight: 600
-        // & span.asideFilters__min-money
-        //     // position: absolute
-        //     // left: 0
-        //     display: block
-        // & span.asideFilters__max-money
-        //     display: block
-        //     // position: absolute
-        //     // right: 0
     & form
         & ul 
             box-sizing: border-box

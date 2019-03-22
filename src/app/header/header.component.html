@@ -19,7 +19,15 @@
     </a>
     <div class="header__toolbar">
       <div class="header__toolbar__search">
-        <input type="text" placeholder="Поиск" [ngClass]="toggleHide" *ngIf="isShow" #liveSearch (input)="inputLiveSearch($event.target.value)" (keydown.enter)="inputLiveSearch($event.target.value)">
+        <div class="header__toolbar__search-help" [ngClass]="toggleHide" *ngIf="isShow">
+          <input type="text" placeholder="Поиск" min="2" required  #liveSearch (input)="inputLiveSearch($event.target.value, $event.target)"  >
+          <ul *ngIf="liveSearch.validity.valid">
+            <!-- {{liveSearch.validity.valid}} -->
+            <li *ngFor="let product of searchAnswer | async " (click)="liveSearch.value = product.title">{{product.title}}</li>
+          </ul>  
+          <!-- <pre>{{searchAnswer | async | json}}</pre> -->
+        </div>
+        <!-- <input type="text" placeholder="Поиск" [ngClass]="toggleHide" *ngIf="isShow" #liveSearch (input)="inputLiveSearch($event.target.value)" (keydown.enter)="inputLiveSearch($event.target.value)"> -->
         <button class="header__toolbar__item header__toolbar__btn"  (click)="isShow = !isShow">
           <i class="fas fa-search"></i>
         </button>

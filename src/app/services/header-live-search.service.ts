@@ -16,23 +16,14 @@ export class HeaderLiveSearchService {
   
   public getProducts(): Observable<IData[]> {
     return this.answerSubject$$.asObservable();
-    // return of(productsData)
   }
 
-  // public inputValueFilter(value): void{
-  //   this.answerSubject$$
-  //     .next(this.searchValue = value)
-
-  // }
-
   public inputValueFilter(value): void{
-    // this.searchValue = value.toLowerCase();
     this.searchValue = this.products.filter( (product)=>{
       return  product.title.toLowerCase().includes(value.toLowerCase());
     });
     this.answerSubject$$
       .next(this.searchValue)
-      
   }
 
 
