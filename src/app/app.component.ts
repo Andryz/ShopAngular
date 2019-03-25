@@ -9,19 +9,21 @@ import { GetProductsPending } from './store/actions/ptoducts.action';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.sass'],
 })
-export class AppComponent implements OnInit {
+export class AppComponent  {
   title = 'shop';
 
-  // public products$ = productsData$;
-  public products$;
 
 
-  public constructor(
-    private _store: Store<IStore>
-  ){}
+  
+  // public products$;
 
-  public ngOnInit(): void{
-    this._store.dispatch(new GetProductsPending());
-    this.products$ = this._store.select('products');
-  }
+
+  // public constructor(
+  //   private _store: Store<IStore>
+  // ){}
+
+  // public ngOnInit(): void{
+  //   this._store.dispatch(new GetProductsPending());
+  //   this.products$ = this._store.select('products');
+  // }
 }

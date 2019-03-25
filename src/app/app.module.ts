@@ -21,6 +21,8 @@ import { ButtonFilterDirective } from './directives/button-filter.directive';
 import { RangeFilterDirective } from './directives/range-filter.directive';
 import { MainProductsComponent } from './content/main-products/main-products.component';
 import { routes } from './routes';
+import { ContactsComponent } from './content/contacts/contacts.component';
+import { OneProductComponent } from './content/one-product/one-product.component';
 
 
 
@@ -35,7 +37,9 @@ import { routes } from './routes';
     OpenFilterDirective,
     ButtonFilterDirective,
     RangeFilterDirective,
-    MainProductsComponent
+    MainProductsComponent,
+    ContactsComponent,
+    OneProductComponent
   ],
   imports: [
     BrowserModule,

@@ -1,14 +1,16 @@
 <app-header></app-header>
 
-<router-outlet></router-outlet>
-
 <div class="container">
+
+    <router-outlet></router-outlet>
+    
+</div>
+
+<!-- <div class="container">
     <main *ngIf="(products$ | async) as products; else loading">
         <app-aside-filter></app-aside-filter>
         <app-products [products]="products"></app-products>
     </main>
-</div>
-
-<ng-template #loading> loading ...</ng-template>
+</div> -->
 
 <app-footer></app-footer>
