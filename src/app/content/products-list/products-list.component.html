@@ -1,0 +1,11 @@
+<p>
+  products-list works!
+</p>
+<ng-container *ngIf="(products$ | async) as products; else loading">
+
+  <app-products [products]="products"></app-products>
+
+</ng-container>
+
+
+<ng-template #loading> loading ...</ng-template>

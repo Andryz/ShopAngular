@@ -5,6 +5,7 @@ import { MainProductsComponent } from './content/main-products/main-products.com
 import { ContactsComponent } from './content/contacts/contacts.component';
 import { OneProductComponent } from './content/one-product/one-product.component';
 import { ProductsComponent } from './products/products.component';
+import { ProductsListComponent } from './content/products-list/products-list.component';
 
 export const routes: Route[] = [
 
@@ -14,10 +15,10 @@ export const routes: Route[] = [
         children: [
             {
                 path: '',
-                component: ProductsComponent
+                component: ProductsListComponent
             },
             {
-                path: ':id',
+                path: ':title',
                 component: OneProductComponent
             }
         ]
@@ -26,11 +27,13 @@ export const routes: Route[] = [
         path: 'contacts',
         component: ContactsComponent
     }
+    // ,
     // {
     //     path: '**',
     //     redirectTo: 'products',
     //     pathMatch: 'full'
-    // }, 
+    // }
+    // , 
     // {
     //     path: '', 
     //     redirectTo: 'products',

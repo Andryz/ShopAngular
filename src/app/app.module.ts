@@ -23,6 +23,9 @@ import { MainProductsComponent } from './content/main-products/main-products.com
 import { routes } from './routes';
 import { ContactsComponent } from './content/contacts/contacts.component';
 import { OneProductComponent } from './content/one-product/one-product.component';
+import { ProductsListComponent } from './content/products-list/products-list.component';
+import { UniqTitlePipe } from './common/pipe/uniq-title.pipe';
+
 
 
 
@@ -39,7 +42,9 @@ import { OneProductComponent } from './content/one-product/one-product.component
     RangeFilterDirective,
     MainProductsComponent,
     ContactsComponent,
-    OneProductComponent
+    OneProductComponent,
+    ProductsListComponent,
+    UniqTitlePipe
   ],
   imports: [
     BrowserModule,

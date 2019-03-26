@@ -1,9 +1,10 @@
 <p>
   main-products works!
 </p>
-<main *ngIf="(products$ | async) as products; else loading">
+<main>
+  
   <app-aside-filter></app-aside-filter>
-  <app-products [products]="products"></app-products>
+  <router-outlet></router-outlet>
+  
 </main>
 
-<ng-template #loading> loading ...</ng-template>

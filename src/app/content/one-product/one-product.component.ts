@@ -13,9 +13,14 @@ export class OneProductComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this._activatedRoute.paramMap.subscribe((params: ParamMap)=>{
-      console.log(params.get('id'));
-    })
+    // this._activatedRoute.paramMap.subscribe((params: ParamMap)=>{
+    //   console.log(params.get('id'));
+    
+    // })
+    // this._activatedRoute.paramMap.subscribe((params: ParamMap)=>{
+    //   console.log(params.get('id'));
+    
+    // })
   }
 
 }

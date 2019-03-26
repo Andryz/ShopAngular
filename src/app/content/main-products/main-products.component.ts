@@ -8,18 +8,7 @@ import { GetProductsPending } from 'src/app/store/actions/ptoducts.action';
   templateUrl: './main-products.component.html',
   styleUrls: ['./main-products.component.scss']
 })
-export class MainProductsComponent implements OnInit {
+export class MainProductsComponent  {
 
-  public products$;
-
-
-  public constructor(
-    private _store: Store<IStore>
-  ){}
-
-  public ngOnInit(): void{
-    this._store.dispatch(new GetProductsPending());
-    this.products$ = this._store.select('products');
-  }
 
 }
