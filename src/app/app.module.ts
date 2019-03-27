@@ -25,6 +25,7 @@ import { ContactsComponent } from './content/contacts/contacts.component';
 import { OneProductComponent } from './content/one-product/one-product.component';
 import { ProductsListComponent } from './content/products-list/products-list.component';
 import { UniqTitlePipe } from './common/pipe/uniq-title.pipe';
+import { ResolveService } from './content/one-product/resolve.service';
 
 
 
@@ -56,7 +57,7 @@ import { UniqTitlePipe } from './common/pipe/uniq-title.pipe';
       ? []
       : StoreDevtoolsModule.instrument()
   ],
-  providers: [ProductsService],
+  providers: [ProductsService, ResolveService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

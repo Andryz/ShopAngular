@@ -1,11 +1,11 @@
 import { AppComponent } from './app.component';
-// import { Route } from '@angular/compiler/src/core';
 import { Route } from '@angular/router';
 import { MainProductsComponent } from './content/main-products/main-products.component';
 import { ContactsComponent } from './content/contacts/contacts.component';
 import { OneProductComponent } from './content/one-product/one-product.component';
-import { ProductsComponent } from './products/products.component';
 import { ProductsListComponent } from './content/products-list/products-list.component';
+import { ResolveService } from './content/one-product/resolve.service';
+
 
 export const routes: Route[] = [
 
@@ -18,8 +18,11 @@ export const routes: Route[] = [
                 component: ProductsListComponent
             },
             {
-                path: ':title',
-                component: OneProductComponent
+                path: ':id',
+                component: OneProductComponent,
+                resolve: {
+                    product: ResolveService
+                }
             }
         ]
     },

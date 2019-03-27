@@ -33,7 +33,7 @@
     <ng-container *ngFor="let product of products | titleFilter:(navTitletext | async)">
 
 
-      <div class="furniture__item" [routerLink]="['/products', product.title]">
+      <div class="furniture__item" [routerLink]="[product.id]">
         <a  class="furniture__img">
           <img src="{{product.img}}" alt="мебель">
         </a>

@@ -5,7 +5,7 @@ import { HeaderLiveSearchService } from '../services/header-live-search.service'
 import { IData } from '../store/reducers/products.reducer';
 import { Store } from '@ngrx/store';
 import { IStore } from '../store';
-import { GetProductsPending } from '../store/actions/ptoducts.action';
+import { GetProductsPending } from '../store/actions/products.action';
 
 @Component({
   selector: 'app-header',

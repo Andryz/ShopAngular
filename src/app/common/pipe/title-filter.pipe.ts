@@ -1,5 +1,7 @@
 import { Pipe, PipeTransform } from '@angular/core';
 import { IData } from 'src/app/store/reducers/products.reducer';
+import { ProductsListComponent } from 'src/app/content/products-list/products-list.component';
+
 
 @Pipe({
   name: 'titleFilter'
@@ -13,13 +15,17 @@ private allProducts: string = "ВЕСЬ ТОВАР";
       return products;
     }
     if(clickTitle == this.allProducts){
+      // ProductsListComponent.innerHtml = "rtr";
+      console.dir(ProductsListComponent);
       console.log(clickTitle.toLowerCase(), this.allProducts.toLowerCase());
-      return products;
+      //  console.log(products);
+       return products;
     }
     return products.filter( (product)=>{
       return product.type.toLowerCase()
         .includes(clickTitle.toLowerCase());
     });
   }
+
 
 }

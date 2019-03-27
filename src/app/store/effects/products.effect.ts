@@ -3,7 +3,7 @@ import { Actions, Effect, ofType } from '@ngrx/effects';
 import { of } from 'rxjs';
 import { catchError, map, switchMap, tap, mergeMap } from 'rxjs/operators';
 import { IData } from '../reducers/products.reducer';
-import { GET_PRODUCTS_PENDING, GetProductsSuccess, GetProductsError } from '../actions/ptoducts.action';
+import { GET_PRODUCTS_PENDING, GetProductsSuccess, GetProductsError } from '../actions/products.action';
 import { ProductsService } from 'src/app/services/products.service';
 
 
@@ -21,7 +21,7 @@ export class ProductsEffects {
         .pipe(
             ofType(GET_PRODUCTS_PENDING),
             // tap((e)=>{console.log(this._actions$, e);}),
-            mergeMap(() => this.products.getProducts()
+            switchMap(() => this.products.getProducts()
                 .pipe(
                     map((products: IData[]) => new GetProductsSuccess(products)),
                     catchError((err) => of(new GetProductsError(err)))

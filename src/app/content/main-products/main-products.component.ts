@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { IStore } from 'src/app/store';
-import { GetProductsPending } from 'src/app/store/actions/ptoducts.action';
+import { GetProductsPending } from 'src/app/store/actions/products.action';
 
 @Component({
   selector: 'app-main-products',

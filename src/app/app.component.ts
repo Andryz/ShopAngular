@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { productsData$ } from './common/data/data';
 import { IStore } from './store';
 import { Store } from '@ngrx/store';
-import { GetProductsPending } from './store/actions/ptoducts.action';
+import { GetProductsPending } from './store/actions/products.action';
 
 @Component({
   selector: 'app-root',

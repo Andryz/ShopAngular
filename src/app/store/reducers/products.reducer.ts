@@ -1,4 +1,4 @@
-import { ProductsAction, GET_PRODUCTS_SUCCESS, GetProductsSuccess, GET_PRODUCTS_ERROR } from '../actions/ptoducts.action';
+import { ProductsAction, GET_PRODUCTS_SUCCESS, GetProductsSuccess, GET_PRODUCTS_ERROR } from '../actions/products.action';
 
 
 export interface IData {
@@ -26,6 +26,10 @@ export interface IData {
         material: string;
     };
     type: string;
+    filter: {
+        type: string;
+    };
+    id: number;
 }
 
 const initialState: IData[] = [
@@ -53,14 +57,18 @@ const initialState: IData[] = [
             depth: 10,
             material: 'text'
         },
-        type: 'Стулья'
+        type: 'Стулья',
+        filter: {
+            type: 'chairs'
+        },
+        id: 134
     }
 ];
 
 export function productsReducer (state: IData[] = initialState, action: ProductsAction){
     switch(action.type){
         case GET_PRODUCTS_SUCCESS:{
-            return [...state, ...action.payload]
+            return action.payload
         }
         case GET_PRODUCTS_ERROR:
             return state;

@@ -28,7 +28,11 @@ export const productsData: IData[] = [
             depth: 10,
             material: 'text'
         },
-        type: 'Диваны'
+        type: 'Диваны',
+        filter: {
+            type: 'sofas'
+        },
+        id: 1
     },
     {
         title: 'Стул Pit',
@@ -54,7 +58,11 @@ export const productsData: IData[] = [
             depth: 10,
             material: 'text'
         },
-        type: 'Стулья'
+        type: 'Стулья',
+        filter: {
+            type: 'chairs'
+        },
+        id: 2
     },
     {
         title: 'Стол Maison',
@@ -80,7 +88,11 @@ export const productsData: IData[] = [
             depth: 10,
             material: 'text'
         },
-        type: 'Столы'
+        type: 'Столы',
+        filter: {
+            type: 'tables'
+        },
+        id: 3
     },
     {
         title: 'Комплект мебели Bouton',
@@ -106,7 +118,11 @@ export const productsData: IData[] = [
             depth: 10,
             material: 'text'
         },
-        type: 'Комплекты'
+        type: 'Комплекты',
+        filter: {
+            type: 'kits'
+        },
+        id: 4
     },
     {
         title: 'Лампа Heat Felt',
@@ -132,7 +148,11 @@ export const productsData: IData[] = [
             depth: 10,
             material: 'text'
         },
-        type: 'Освещение'
+        type: 'Освещение',
+        filter: {
+            type: 'lighting'
+        },
+        id: 5
     },
     {
         title: 'Диван Rebel от Andrew Martin',
@@ -158,7 +178,11 @@ export const productsData: IData[] = [
             depth: 10,
             material: 'text'
         },
-        type: 'Диваны и кресла'
+        type: 'Диваны и кресла',
+        filter: {
+            type: 'sofas and armchairs'
+        },
+        id: 6
     }
 ];
 export const productsData$: Observable<IData[]> = of(productsData)
