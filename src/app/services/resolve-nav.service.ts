@@ -6,7 +6,7 @@ import { ProductsService } from 'src/app/services/products.service';
 import { IData } from 'src/app/store/reducers/products.reducer';
 
 @Injectable()
-export class ResolveService implements Resolve<IData | false> {
+export class ResolveNavService implements Resolve<boolean> {
 
   constructor(
     private _router: Router,
@@ -14,13 +14,14 @@ export class ResolveService implements Resolve<IData | false> {
 
   ) { }
 
-  public resolve(route: ActivatedRouteSnapshot): Observable<IData | false> {
-    let productId: number = +route.params.id;
-    // console.log(route.params);
-    return this._products.getProduct(productId)
+  public resolve(route: ActivatedRouteSnapshot): Observable<boolean> {
+
+    let productType: string = route.params.type;
+    
+    return this._products.getProductTypes()
       .pipe(
         map(product=>{
-          if(product) return product
+          if(product) return true
           this._router.navigate(['/'])
           return false
         })

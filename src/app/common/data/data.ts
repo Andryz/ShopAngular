@@ -185,5 +185,44 @@ export const productsData: IData[] = [
         id: 6
     }
 ];
-export const productsData$: Observable<IData[]> = of(productsData)
-    .pipe(delay(300));
+
+export interface ICategory {
+    name: string
+    title: string
+}
+export interface ICategoryResponse {
+    items: ICategory[]
+}
+
+export const fakeCategory: ICategoryResponse = {
+    items:[
+        {
+            name: 'sofas',
+            title: 'ДИВАНЫ'
+        },
+        {
+            name: 'chairs',
+            title: 'СТУЛЬЯ'
+
+        },
+        {
+            name: 'tables',
+            title: 'СТОЛЫ'
+        },
+        {
+            name: 'kits',
+            title: 'КОМПЛЕКТЫ'
+        },
+        {
+            name: 'lighting',
+            title: 'ОСВЕЩЕНИЕ'
+        },
+        {
+            name: 'sofas-chairs',
+            title: 'ДИВАНЫ И КРЕСЛА'
+        }
+    ]
+}
+
+
+

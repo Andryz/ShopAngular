@@ -3,9 +3,8 @@ import { ShareService } from '../services/share.service';
 import { Observable } from 'rxjs';
 import { HeaderLiveSearchService } from '../services/header-live-search.service';
 import { IData } from '../store/reducers/products.reducer';
-import { Store } from '@ngrx/store';
-import { IStore } from '../store';
-import { GetProductsPending } from '../store/actions/products.action';
+import { ProductsService } from '../services/products.service';
+import { ICategoryResponse, ICategory } from '../common/data/data';
 
 @Component({
   selector: 'app-header',
@@ -18,52 +17,32 @@ export class HeaderComponent implements OnInit {
   public toggleHide: string = 'show';
   public isShow: boolean = false;
   public searchAnswer: Observable<IData[]>;
-  public products$;
+  public categories$: Observable<ICategory[]>;
   public arrTitle = [];
   public arrTitleUniq = [];
 
 
   
-  constructor(private share: ShareService, private liveSearchAnswer: HeaderLiveSearchService, private _store: Store<IStore>) {
-    this.navTitletext = share.getShareData();
-    this.searchAnswer = liveSearchAnswer.getProducts();
-  }
+  constructor(
+    private share: ShareService, 
+    private liveSearchAnswer: HeaderLiveSearchService, 
+    private _products: ProductsService
+    ) {}
 
 
 
 
-  public clickTitle(e){
-    this.share.doClick(e);
-  }
 
   
-  public ngOnInit(): void{
-    this._store.dispatch(new GetProductsPending());
-    this.products$ = this._store.select('products');
-
-    this.uniqArr()
-    // console.log(this.arrTitleUniq);
-
-    
+  ngOnInit(): void{
+    this.navTitletext = this.share.getShareData();
+    this.searchAnswer = this.liveSearchAnswer.getProducts();
+    this.categories$ = this._products.getProductTypes();
   }
 
   inputLiveSearch(inputEvent, test): void{
     this.liveSearchAnswer.inputValueFilter(inputEvent);
   }
 
-    // Метод
-    // Уникайный Тип продукта
-    uniqArr(){
-      // console.log(this.products$.actionsObserver._value.payload);
-      this.products$.subscribe((products: IData[])=>{
 
-        for (let product of products){
-          this.arrTitle.push(product.type); 
-        }
-        function uniq( value, index, self){
-          return self.indexOf(value) === index;
-        }
-        this.arrTitleUniq = this.arrTitle.filter(uniq);
-      })
-    }
 }

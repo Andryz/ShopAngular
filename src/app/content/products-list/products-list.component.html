@@ -1,6 +1,5 @@
-<p>
-  products-list works!
-</p>
+<app-aside-filter></app-aside-filter>
+
 <ng-container *ngIf="(products$ | async) as products; else loading">
 
   <app-products [products]="products"></app-products>

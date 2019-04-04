@@ -5,32 +5,57 @@ import { ContactsComponent } from './content/contacts/contacts.component';
 import { OneProductComponent } from './content/one-product/one-product.component';
 import { ProductsListComponent } from './content/products-list/products-list.component';
 import { ResolveService } from './content/one-product/resolve.service';
+import { ResolveNavService } from './services/resolve-nav.service';
+import { CategoryGuard } from './services/category.guard';
 
 
 export const routes: Route[] = [
 
     {
-        path: 'products', 
+        path: '',
         component: MainProductsComponent,
         children: [
             {
-                path: '',
-                component: ProductsListComponent
-            },
+                path: ':category',
+                component: ProductsListComponent,
+                canActivate: [
+                    CategoryGuard
+                ],
+                children: [
+                    {
+                        path: ':type',
+                        component: ProductsListComponent,
+                        resolve: {
+                            product: ResolveNavService
+                        },
+                        children: [
+                            {
+                                path: '',
+                                component: ProductsListComponent,
+                            }
+                            ,
+                            {
+                                path: ':id',
+                                component: OneProductComponent,
+                                resolve: {
+                                    product: ResolveService
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+            ,
             {
-                path: ':id',
-                component: OneProductComponent,
-                resolve: {
-                    product: ResolveService
-                }
+                path: 'contacts',
+                component: ContactsComponent
             }
         ]
-    },
-    {
-        path: 'contacts',
-        component: ContactsComponent
+        
     }
-    // ,
+    
+    
+
     // {
     //     path: '**',
     //     redirectTo: 'products',

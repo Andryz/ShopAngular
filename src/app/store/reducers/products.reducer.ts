@@ -1,6 +1,7 @@
 import { ProductsAction, GET_PRODUCTS_SUCCESS, GetProductsSuccess, GET_PRODUCTS_ERROR } from '../actions/products.action';
 
 
+
 export interface IData {
     title: string;
     descriptionShort: string;
@@ -66,6 +67,7 @@ const initialState: IData[] = [
 ];
 
 export function productsReducer (state: IData[] = initialState, action: ProductsAction){
+
     switch(action.type){
         case GET_PRODUCTS_SUCCESS:{
             return action.payload

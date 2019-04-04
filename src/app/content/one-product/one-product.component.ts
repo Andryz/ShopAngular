@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, ParamMap } from '@angular/router';
+import { IData } from 'src/app/store/reducers/products.reducer';
 
 @Component({
   selector: 'app-one-product',
@@ -8,23 +9,14 @@ import { ActivatedRoute, ParamMap } from '@angular/router';
 })
 export class OneProductComponent implements OnInit {
 
+  public product: IData;
+
   constructor(
     private _activatedRoute: ActivatedRoute
   ) { }
 
   ngOnInit() {
-    // this._activatedRoute.paramMap.subscribe((params: ParamMap)=>{
-    //   console.log(params.get('id'));
-    // });
-
-    // this._activatedRoute.queryParamMap.subscribe((params: ParamMap)=>{
-    //   console.log(params.get('page'));
-    // });
-
-    // this._activatedRoute.fragment.subscribe((f: string)=>{
-    //   console.log(f);
-    // });
     console.log(this._activatedRoute.snapshot.data.product);
-
+    this.product = this._activatedRoute.snapshot.data.product;
   }
 }

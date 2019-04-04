@@ -26,6 +26,8 @@ import { OneProductComponent } from './content/one-product/one-product.component
 import { ProductsListComponent } from './content/products-list/products-list.component';
 import { UniqTitlePipe } from './common/pipe/uniq-title.pipe';
 import { ResolveService } from './content/one-product/resolve.service';
+import { ResolveNavService } from './services/resolve-nav.service';
+import { CategoryGuard } from './services/category.guard';
 
 
 
@@ -57,7 +59,12 @@ import { ResolveService } from './content/one-product/resolve.service';
       ? []
       : StoreDevtoolsModule.instrument()
   ],
-  providers: [ProductsService, ResolveService],
+  providers: [
+    ProductsService, 
+    ResolveService, 
+    ResolveNavService,
+    CategoryGuard
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

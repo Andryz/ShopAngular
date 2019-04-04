@@ -14,7 +14,7 @@
       <p>+7(999)123-45-67</p>
       <p>sales@company.ru</p>
     </div>
-    <a class="header__logo" href="#">
+    <a class="header__logo" href="/">
       Furniture store
     </a>
     <div class="header__toolbar">
@@ -37,22 +37,18 @@
     </div>
   </div>
   <nav class="nav-main">
-    <ul (click)="clickTitle($event)">
-      <li><a routerLink="/products" routerLinkActive="nav-main__active">ВЕСЬ ТОВАР</a></li>
 
-      <!-- <ng-container *ngFor="let title of products$ | async | uniqTitle">
-        <li><a [routerLink]="['/products', title.filter.type]" routerLinkActive="nav-main__active">{{title.type}}</a></li>
-      </ng-container> -->
+    <ul>
+      <!-- <li><a routerLink="/products" routerLinkActive="nav-main__active">ВЕСЬ ТОВАР</a></li> -->
+
+      <ng-container *ngIf="(categories$ | async) as categories">
+
+        <li *ngFor="let category of categories">
+          <a [routerLink]="[category.name]" routerLinkActive="nav-main__active">{{category.title}}</a>
+        </li>
+
+      </ng-container>
       
-      <li><a routerLink="/contacts" routerLinkActive="nav-main__active">ДИВАНЫ И КРЕСЛА</a></li>
-      <li><a routerLinkActive="nav-main__active">СТУЛЬЯ</a></li>
-      <li><a routerLinkActive="nav-main__active">СТОЛЫ</a></li>
-      <li><a routerLinkActive="nav-main__active">ОСВЕЩЕНИЕ</a></li>
-      <li><a routerLinkActive="nav-main__active">КОМПЛЕКТЫ</a></li>
     </ul> 
   </nav>
 </header>
-<!-- <pre> -->
-  <!-- {{arrTitleUniq}} -->
-    <!-- {{products$.type | async}} -->
-<!-- </pre> -->

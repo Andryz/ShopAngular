@@ -3,6 +3,7 @@ import { IData } from '../store/reducers/products.reducer';
 import { ShareService } from '../services/share.service';
 import { Observable } from 'rxjs';
 import { HeaderLiveSearchService } from '../services/header-live-search.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-products',
@@ -17,13 +18,17 @@ export class ProductsComponent implements OnInit {
   
   public navTitletext: Observable<string>;
   public searchAnswer: Observable<IData[]>;
+  public productsCategory;
 
-  constructor(private share: ShareService, private liveSearchAnswer: HeaderLiveSearchService) {
+  constructor(private share: ShareService, private liveSearchAnswer: HeaderLiveSearchService, private _activatedRoute: ActivatedRoute) {
     this.navTitletext = share.getShareData();
     this.searchAnswer = liveSearchAnswer.getProducts();
    }
 
   ngOnInit() {
+    // console.log(this._activatedRoute.snapshot.data.product);
+    // this.productsCategory = this._activatedRoute.snapshot.data.product;
+    // console.log(this._activatedRoute.snapshot.data.product);
     // console.log(this.searchAnswer);
   }
    

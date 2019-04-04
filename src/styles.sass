@@ -266,6 +266,12 @@ main
 // ======= header END ========
 
 
+// ======= products-list  ========
+app-products-list
+    display: flex
+    justify-content: space-between    
+// ======= products-list  END ========
+
 
 // ======= products  ========
 .furniture
@@ -342,7 +348,11 @@ app-footer
             border: 1px solid #fff
             border-radius: 4px
             text-decoration: none
+            cursor: pointer
             color: #ffffff
+            &:hover
+                background: #ffffff
+                color: $green
     &__dev
         display: flex
         justify-content: center
