@@ -17,32 +17,23 @@ export const routes: Route[] = [
         children: [
             {
                 path: ':category',
-                component: ProductsListComponent,
+                component: MainProductsComponent,
                 canActivate: [
                     CategoryGuard
                 ],
                 children: [
                     {
-                        path: ':type',
-                        component: ProductsListComponent,
+                        path: ':id',
+                        component: OneProductComponent,
                         resolve: {
-                            product: ResolveNavService
-                        },
-                        children: [
-                            {
-                                path: '',
-                                component: ProductsListComponent,
-                            }
-                            ,
-                            {
-                                path: ':id',
-                                component: OneProductComponent,
-                                resolve: {
-                                    product: ResolveService
-                                }
-                            }
-                        ]
+                            product: ResolveService
+                        }
+                    },
+                    {
+                        path: '',
+                        component: ProductsListComponent,
                     }
+                      
                 ]
             }
             ,

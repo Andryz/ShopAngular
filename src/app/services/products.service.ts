@@ -33,7 +33,7 @@ export class ProductsService {
         return of(productsData)
             .pipe(
                 map((products: IData[]) => {
-                    // console.log(products, id);
+                    console.log(products, id);
                     return products.find(product => product.id === id);
                 })
             )
